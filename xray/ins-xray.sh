@@ -197,7 +197,7 @@ cat > /etc/xray/config.json << END
        "streamSettings":{
          "network": "ws",
             "wsSettings": {
-                "path": "/worryfree"
+                "path": "/vmess"
           }
         }
      },
@@ -546,7 +546,7 @@ sed -i '$ i}' /etc/nginx/conf.d/xray.conf
 
 sleep 1
 echo -e "[ ${green}INFO$NC ] Installing bbr.."
-#wget -q -O /usr/bin/bbr "https://raw.githubusercontent.com/arlanstore/src/ipuk/dll/bbr.sh"
+#wget -q -O /usr/bin/bbr "https://raw.githubusercontent.com/arlanstore/src/ipuk/ssh/bbr.sh"
 #chmod +x /usr/bin/bbr
 #bbr >/dev/null 2>&1
 #rm /usr/bin/bbr >/dev/null 2>&1
@@ -562,7 +562,7 @@ systemctl restart runn
 
 sleep 1
 wget -q -O /usr/bin/add-ws "https://raw.githubusercontent.com/arlanstore/src/ipuk/xray/add-ws.sh" && chmod +x /usr/bin/add-ws
-wget -q -O /usr/bin/add-vless "https://raw.githubusercontent.com/FranataVPN/src/ipuk/xray/add-vless.sh" && chmod +x /usr/bin/add-vless
+wget -q -O /usr/bin/add-vless "https://raw.githubusercontent.com/arlanstore/src/ipuk/xray/add-vless.sh" && chmod +x /usr/bin/add-vless
 wget -q -O /usr/bin/add-tr "https://raw.githubusercontent.com/arlanstore/src/ipuk/xray/add-tr.sh" && chmod +x /usr/bin/add-tr
 wget -q -O /usr/bin/del-user "https://raw.githubusercontent.com/arlanstore/src/ipuk/xray/del-ws.sh" && chmod +x /usr/bin/del-user
 wget -q -O /usr/bin/renew-ws "https://raw.githubusercontent.com/arlanstore/src/ipuk/xray/renew-ws.sh" && chmod +x /usr/bin/renew-ws
